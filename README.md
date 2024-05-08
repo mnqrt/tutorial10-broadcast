@@ -30,3 +30,15 @@ Gambar pertama menunjukkan server dan klien dengan port yang berbeda (server di 
 ![alt text](img11.png)
 ![alt text](img12.png)
 Gambar kedua memperlihatkan kondisi ketika klien dan server menggunakan port yang sama, yaitu 8080. Dengan kesesuaian ini, koneksi antara klien dan server berhasil. Ini menegaskan bahwa jika port klien diubah, maka port server juga harus disesuaikan karena komunikasi antara server dan klien memerlukan keselarasan dua arah.
+
+
+# 2.3 : Small changes, add IP and Port
+![alt text](img13.png)
+Output yang ditampilkan di atas dihasilkan dengan mengganti satu baris dalam server.rs seperti yang ditunjukkan:
+
+![alt text](img14.png)
+![alt text](img15.png)
+![alt text](img16.png)
+![alt text](img17.png)
+
+Dengan perubahan ini, diharapkan bahwa ketika satu klien mengirim pesan ke server dan server menyebarkannya ke semua klien, IP dan port klien yang mengirim pesan akan ikut disertakan. Hal ini dicapai melalui variabel addr, yang sudah disiapkan dalam bcast_tx sebagai wadah untuk pesan yang akan dikirimkan.
